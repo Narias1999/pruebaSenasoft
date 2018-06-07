@@ -83,6 +83,9 @@ header .cover video {
 }
 header .cover .info {
   z-index: 20;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.7);
   text-align: center;
 }
 h1,h2 {
@@ -214,15 +217,33 @@ main .galery > div:hover .mask {
   background: rgba(10, 24, 29, 0.7);
 }
 footer {
-  background: #2f3640;
+  background: rgb(51, 51, 51);
   color: #fff;
+  padding: 100px 0;
 }
 footer figure {
-  pa
+  padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+footer figure figcaption {
+  font-size: 40px;
+  margin-left: 20px;
+}
 footer figure img {
   width: 70px;
+}
+footer .social {
+  display: flex;
+  padding: 45px;
+}
+footer .social img{
+  width: 23px;
+  margin: 0 17px;
+  align-self: center;
+  cursor: pointer;
+}
+footer .copyright {
+  font-size: 14px;
 }
