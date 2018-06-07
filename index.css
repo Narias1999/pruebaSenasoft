@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --active: rgb(17, 180, 245);
+  --text: #2c3e50;
+  --ligth-text: rgb(173, 171, 171);
+  --even: rgb(247, 245, 246);
+}
+body {
+  color: var(--text);
+  font-family: 'Titillium Web', sans-serif;
+}
+.center-c {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+strong {
+  text-transform: uppercase;
+}
+header {
+  color: #fff;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 80px;
+  align-items: center;
+}
+header nav figure {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav figure img {
+  width: 40px;
+  margin-right: 20px;
+}
+header nav ul {
+  display: flex;
+}
+li {
+  list-style: none;
+}
+header nav ul li {
+  margin-left: 20px;
+}
+a {
+  text-decoration: none;
+}
+header nav ul li a {
+  color: #fff;
+  transition: .4s;
+}
+header nav ul li a:hover, nav ul li a.active {
+  color: var(--active);
+  font-weight: bold;
+}
+header .cover {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+header .cover video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
+}
+header .cover .info {
+  z-index: 20;
+  text-align: center;
+}
+h1,h2 {
+  font-weight: 400;
+}
+header .cover .info h1 {
+  font-size: 50px;
+}
+header .cover .info h3 {
+  padding-top: 30px;
+  font-size: 25px;
+}
+header .cover .info h6 {
+  font-weight: 400;
+  font-size: 20px;
+}
+main .blog .entry {
+  width: 100%;
+  padding: 40px 0;
+  padding-left: 15%;
+  display: flex;
+  justify-content: flex-start;
+}
+main .blog .entry:nth-child(even) {
+  background: var(--even);
+}
+main .blog .entry .post {
+  width: 650px;
+  overflow: hidden;
+}
+main .blog .entry .post .header > img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+main .blog .entry .post .header .actions {
+  background: rgb(237, 239, 245);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 15px;
+}
+main .blog .entry .post .header .actions img {
+  width: 20px;
+  margin: 0 8px;
+  align-self: center;
+}
+main .blog .entry .post .header .actions a {
+  display: flex;
+  justify-content: flex-start;
+  color: var(--ligth-text);
+  transition: .4s;
+}
+main .blog .entry .post .body {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+main .blog .entry .post .body .left {
+  width: 600px;
+}
+main .blog .actions .left {
+  display: flex;
+}
+main .blog .entry a:hover {
+  color: var(--active) !important;
+}
+main .blog .entry .categories {
+  margin-left: 20px;
+}
+main .blog .entry .categories h2 {
+  padding-bottom: 8px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid var(--active);
+}
+main .blog .entry .categories a {
+  transition: .4s;
+  color: var(--text);
+}
+main .blog .entry .categories li a {
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+main .galery {
+  background: var(--even);
+  padding-bottom: 30px;
+  display: grid;
+  grid-template-columns: repeat(5, 180px);
+  grid-template-rows: auto 180px 180px;
+  justify-content: center;
+}
+main .galery > div {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+main .galery h2 {
+  padding: 20px 0;
+  grid-column-start: 1;
+  grid-column-end: 6;
+}
+main .galery > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main .galery > div .mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background: rgba(10, 24, 29, 0);
+  transition: .4s;
+}
+main .galery > div .mask img {
+  transform: scale(0);
+  transition-duration: .5s;
+  transition-delay: .3s;
+}
+main .galery > div:hover .mask img {
+  transform: scale(1);  
+}
+main .galery > div:hover .mask {
+  background: rgba(10, 24, 29, 0.7);
+}
+footer {
+  background: #2f3640;
+  color: #fff;
+}
+footer figure {
+  pa
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer figure img {
+  width: 70px;
+}
